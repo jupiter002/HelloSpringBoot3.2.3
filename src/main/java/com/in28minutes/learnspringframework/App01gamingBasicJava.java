@@ -1,13 +1,18 @@
 package com.in28minutes.learnspringframework;
 
-public class App01gamingBasicJava {
+import com.in28minutes.learnspringframework.game.GameRunner;
+import com.in28minutes.learnspringframework.game.PackManGame;
+
+public class App01GamingBasicJava {
 
 	public static void main(String[] args) {
 		
-		//1: Launch a Spring Context - 
+		//var game = new MarioGame();
+		//var game = new SuperContraGame();
+		var game = new PackManGame();
 		
-		//2: Configure the things that we want Spring to manage - @Configuration
-
+		var gameRunner = new GameRunner(game);
+		gameRunner.run();
 	}
 
 }
